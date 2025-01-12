@@ -1,4 +1,5 @@
 using JG.Task.Addition.Data;
+using JG.Task.Addition.Services;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -7,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddScoped<AdditionActivityService>();
 
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
