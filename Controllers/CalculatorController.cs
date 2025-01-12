@@ -3,6 +3,7 @@ using JG.Task.Addition.Models;
 using JG.Task.Addition.Data;
 using System.Threading.Tasks;
 using JG.Task.Addition.Services;
+using JG.Task.Addition.APIContracts;
 
 namespace JG.Task.Addition.Controllers
 {
@@ -33,9 +34,5 @@ namespace JG.Task.Addition.Controllers
 
     }
 
-    public class AdditionRequest
-    {
-        public decimal FirstNumber { get; set; }
-        public decimal SecondNumber { get; set; }
-    }
+   
 }
